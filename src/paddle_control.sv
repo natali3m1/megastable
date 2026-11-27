@@ -43,7 +43,7 @@ always_ff @(posedge clk) begin
             p1_x <= p1_x + PADDLE_SPEED;
         end
         else if (p1_left && !p1_right) begin
-            p1_x <= p1_x - PADDLE_SPEEDß;
+            p1_x <= p1_x - PADDLE_SPEED;
         end
     end
 end
