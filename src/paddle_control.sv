@@ -38,4 +38,12 @@ always_ff @(posedge clk) begin
         p2_x <= 3 * SCREEN_WIDTH / 4; //480
         p2_y <= SCREEN_HEIGHT / 2; //240
     end
+    else if (frame_tick) begin // update paddle positions
+        if (p1_right && !p1_left) begin
+            p1_x <= p1_x + PADDLE_SPEED;
+        end
+        else if (p1_left && !p1_right) begin
+            p1_x <= p1_x - PADDLE_SPEEDß;
+        end
+    end
 end
